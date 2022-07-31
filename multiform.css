@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+    --gc-color: #458189;
+    --foreground-color: #656565;
+    --not-white: rgb(255, 255, 255);
+    --hover-gc-color: #56a2ac;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-bottom: 0.875rem;
+}
+
+.gc-color {
+    color: var(--gc-color);
+}
+
+.step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.step-indicator-icon {
+    display: grid;
+    place-items: center;
+    background-color: #fff;
+    border: 1px solid var(--gc-color);
+    color: var(--gc-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 5px #56a2ac51;
+    margin-bottom: 0.5rem;
+}
+
+.step-indicator-icon.active {
+    background-color: var(--gc-color);
+    border: 1px solid var(--gc-color);
+    color: var(--not-white);
+}
+
+.step-indicator-text {
+    color: var(--foreground-color);
+    text-align: center;
+}
+
+.step-divider {
+    margin-top: 25px;
+    content: "";
+    background-color: var(--gc-color);
+    height: 1px;
+    width: 33%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    -webkit-box-shadow: 0px 3px 22px -1px rgba(0, 0, 0, 0.48);
+    box-shadow: 0px 3px 22px -1px rgba(0, 0, 0, 0.48);
+    overflow: hidden;
+}
+
+aside {
+    color: var(--not-white);
+    min-width: 75px;
+    min-height: 600px;
+    position: relative;
+    background-color: var(--gc-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+aside>h3 {
+    position: absolute;
+    transform: rotate(270deg);
+    bottom: 0;
+    min-width: 600px;
+    transform-origin: 0 0;
+    margin-left: 2rem;
+}
+
+.content {
+    min-width: 1000px;
+    padding: 1rem;
+    color: var(--foreground-color);
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.multistepbuttons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.multistepbuttons button {
+    padding: 0.7rem 1.5rem;
+    color: var(--not-white);
+    background-color: var(--gc-color);
+    border: 1px solid var(--gc-color);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px 1px #45818976;
+}
+
+.multistepbuttons button:hover {
+    background-color: var(--hover-gc-color);
+    border: 1px solid var(--hover-gc-color);
+}
+
+.step {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.done-step {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.gc-button {
+    padding: 0.7rem 1.5rem;
+    color: var(--not-white);
+    background-color: var(--gc-color);
+    border: 1px solid var(--gc-color);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px 1px #45818976;
+}
+
+.gc-button:hover {
+    background-color: var(--hover-gc-color);
+    border: 1px solid var(--hover-gc-color);
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}

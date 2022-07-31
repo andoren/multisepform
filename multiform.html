@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multistep</title>
+    <link rel="stylesheet" href="multiform.css">
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="step-indicator">
+                <div class="step-indicator-icon ">1</div>
+                <div class="step-indicator-text"></div>
+            </div>
+            <div class="step-divider"></div>
+            <div class="step-indicator">
+                <div class="step-indicator-icon">2</div>
+                <div class="step-indicator-text"></div>
+            </div>
+            <div class="step-divider"></div>
+            <div class="step-indicator">
+                <div class="step-indicator-icon">3</div>
+                <div class="step-indicator-text"></div>
+            </div>
+            <div class="step-divider"></div>
+            <div class="step-indicator">
+                <div class="step-indicator-icon">4</div>
+                <div class="step-indicator-text"></div>
+            </div>
+        </header>
+        <main>
+
+            <aside>
+                <h3 id="sideText">1) Szállítási adatok megadása</h3>
+            </aside>
+
+            <div class="content">
+
+                <div class="steps">
+                    <div class="step">
+                        First step
+                    </div>
+                    <div class="step">
+                        Second Step
+                    </div>
+                    <div class="step">
+                        Third Step
+                    </div>
+                    <div class="step ">
+                        <div class="done-step">
+                            <div style="text-align: center;">
+                                <img src="happy-face.png"></img>
+                                <h2>Sikeresen rögzítette a rendelését!</h2><br>
+                                <h2>Az ön rendelés száma: <span class="gc-color">PR0202-0001111</span></h2>
+                                <button id="resetButton" class="gc-button mt-2">Új rendelés leadása</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="multistepbuttons">
+                    <button id="prevButton">Előző</button>
+                    <button id="nextButton">Következő</button>
+                    <button id="orderButton">Rendelés</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="popup.js"></script>
+    <script src="multiform.js"></script>
+
+</body>
+
+</html>
